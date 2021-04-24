@@ -10,7 +10,6 @@ public class Citta {
 	private int counter = 0;
 	
 	
-	
 	public Citta(String nome) {
 		this.nome = nome;
 	}
@@ -18,6 +17,15 @@ public class Citta {
 	public Citta(String nome, List<Rilevamento> rilevamenti) {
 		this.nome = nome;
 		this.rilevamenti = rilevamenti;
+	}
+	
+	
+
+	public Citta(String nome, List<Rilevamento> rilevamenti, int counter) {
+		super();
+		this.nome = nome;
+		this.rilevamenti = rilevamenti;
+		this.counter = counter;
 	}
 
 	public String getNome() {
@@ -47,7 +55,7 @@ public class Citta {
 	public void increaseCounter() {
 		this.counter += 1;
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -72,11 +80,15 @@ public class Citta {
 			return false;
 		return true;
 	}
+	
+	
+	
 
 	@Override
 	public String toString() {
 		return nome;
 	}
+
 	
 
 }
